@@ -1,10 +1,8 @@
 Functions and Errors (BOOK BUY CONTRACT)
 
-The "Functions and Errors" Solidity program explains the fundamental syntax and features of the Solidity programming language. This program is meant to be a jumping off point for people who are unfamiliar with Solidity and want to get a sense of how it functions.
-
 Description
 
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that returns the string "Smart Contract". This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
+The Library contract represents a simple library system on the Ethereum blockchain. It allows users to buy books from the library by depositing Ether into their accounts. The contract is managed by an admin who can change the book's price, add new books to the library.
 
 Getting Started
 
@@ -30,11 +28,28 @@ contract BookBuy {
     function getadmin() public view returns (address) {
         return admin;
 }
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile CruzContract.sol" button.
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "Vote" contract from the dropdown menu, and then click on the "Deploy" button.
+Variables
+admin (address): The Ethereum address of the contract administrator who has special privileges, such as changing the book's price and adding books to the library..
 
-Once the contract is deployed, you can interact with it by calling the assertExample function. Click on the "assertExample" once done place the value of a which is 50 and b is 25 that equally dividing into 2 next click the hasVoted and paste it the address click call that the message is bool: true next the MAX_VOTES click the tab and will gives the maximum votes reach which is 100 the revertExample to ensure the the function reverts with the specified error message.
+bookQuantity (uint): The current quantity of books available in the library.
+
+Modifiers
+
+isAdmin: A custom modifier that restricts access to functions only to the contract's administrator. It ensures that only the admin can execute certain functions, like changing the book's price and adding new books.
+
+Usage
+
+To use the Library contract, follow these steps:
+
+Deploy the contract by providing the initial book price and quantity.
+
+The deploying account becomes the contract's administrator.
+
+The admin can change the book price using the changePrice function.
+
+The admin can add new books to the library using the addBook function.
+
 
 Authors
 
