@@ -1,12 +1,12 @@
-Functions and Errors (BOOK BUY CONTRACT)
+# Functions and Errors (BOOK BUY CONTRACT)
 
-Description
+## Description
 
 The Library contract represents a simple library system on the Ethereum blockchain. It allows users to buy books from the library by depositing Ether into their accounts. The contract is managed by an admin who can change the book's price, add new books to the library.
 
-Getting Started
+## Getting Started
 
-Executing program
+### Executing program
 
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
@@ -29,18 +29,19 @@ contract BookBuy {
         return admin;
 }
 
-Variables
+## Variables
+
 admin (address): The Ethereum address of the contract administrator who has special privileges, such as changing the book's price and adding books to the library..
 
 bookQuantity (uint): The current quantity of books available in the library.
 
-Modifiers
+## Modifiers
 
 isAdmin: A custom modifier that restricts access to functions only to the contract's administrator. It ensures that only the admin can execute certain functions, like changing the book's price and adding new books.
 
-Usage
+## Usage
 
-To use the Library contract, follow these steps:
+To use the book buy contract, follow these steps:
 
 Deploy the contract by providing the initial book price and quantity.
 
@@ -51,10 +52,10 @@ The admin can change the book price using the changePrice function.
 The admin can add new books to the library using the addBook function.
 
 
-Authors
+## Authors
 
 Alcordo, Angel Adellene A. 422003173@ntc.edu.ph
 
-License
+## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
